@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>♪(^∇^*)</title>
+<body style="margin:0 auto;">
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<video id="video" controls style="width: 930px; max-width: 100%;"></video>
+<script>
+  var video = document.getElementById('video');
+  var videoSrc = 'https://pv.xbottle.top/demo/rick.m3u8';
+ if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource(videoSrc);
+    hls.attachMedia(video);
+  }else{
+    video.src = videoSrc;
+  }
+  alert('弹窗测试');
+</script>
